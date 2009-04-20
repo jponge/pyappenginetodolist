@@ -1,0 +1,12 @@
+application: jpz-todolists
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+
+- url: /(todo|add)?
+  script: todo.py
+
+- url: /static
+  static_dir: static

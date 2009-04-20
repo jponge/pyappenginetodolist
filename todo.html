@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <title>Todo list ({{ userid }})</title>
+    <link type="text/css" rel="stylesheet" href="/static/main.css" />
+</head>
+
+<body>
+    
+    <div id="status">
+        <span>Logged as: {{ userid }}</span>
+        <span><a href="{{ logout_url }}">[logout]</a></span>
+    </div>
+    
+    <div id="entries">
+        <h1>Todo list</h1>
+        <ul>
+        {% for entry in entries %}
+            <li>{{entry.text|escape}} <a href="?delkey={{entry.key}}">[delete]</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    
+    <div id="form">
+        <h1>Add a new entry</h1>
+        <p>
+            <form action="add" method="POST">
+                <input type="text" name="textdata" value=""/>
+                <br/>
+                <input type="submit" name="submit" value="Add">
+            </form>
+        </p>
+    </div>
+    
+</body>
+
+</html>

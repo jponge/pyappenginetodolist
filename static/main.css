@@ -1,0 +1,28 @@
+* {
+    font-family: verdana, sans-serif;
+}
+
+body {
+
+}
+
+h1 {
+    font-size: 22px;
+    color: #333;
+}
+
+a, a:visited {
+    color: black;
+}
+
+a:hover {
+    color: white;
+    background-color: black;
+}
+
+#status {
+    float: right;
+    padding: 0.5em;
+    border: solid 2px #dedede;
+    background-color: #eeeeee;
+}
